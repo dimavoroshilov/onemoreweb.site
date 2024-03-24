@@ -1,0 +1,289 @@
+body {
+    margin: 35px 19px;
+    -webkit-font-smoothing:none;
+    font-family:Arial,Helvetica,sans-serif;
+    text-rendering: optimizeSpeed;
+}
+
+a {
+    color: #00e;
+}
+
+a h3 {
+    text-decoration: underline;
+}
+
+h2 {
+  font-size:36px;
+  margin:.8em 0;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+p {
+  font-size: 23px;
+  line-height: 26px;
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Шапка на десктопе */ 
+.header {
+  margin-bottom: 1.81rem;
+}
+
+/* Блок с проектами на десктопе */  
+.projects {
+  margin-top: 4.37rem;
+}
+
+/* Отступ от заголовка Проекты */  
+#title {
+  margin-bottom: 2.5rem;
+}
+
+
+/* Список проектов */  
+.project-container {
+  display: grid;  
+  grid-template-columns: 2fr 2fr 3fr;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 1.0);
+  margin-top: 0.3rem ;
+  height: 2rem;
+  color: #000;
+}
+
+/* Дата проектов прижата к правому краю */
+.project-date {
+  display: grid;  
+  justify-items: end;
+}
+
+/* Отключить подчеркивание ссылок в названиях проектов */
+.link-project {
+  outline: none;
+  text-decoration: none;
+}
+
+/* Скрыть короткие описания проектов дату */
+.project-container .project-name-mob, .project-date-mob, #short {
+  display: none;
+}
+
+/* Максимальная ширина портфолио и текстов*/ 
+#main{max-width:1720px}
+
+#portfolio {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Стили блока подвал */  
+.footer {
+    margin-top: 8rem;
+}
+
+/* Колонки для почты и резюме */ 
+.container-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Ссылка на резюме прижата к правому краю */ 
+.resume-desktop {
+    display: grid;
+    justify-items: end;
+}
+
+/* Отступ строки с почтой и резюме от соц. сетей */ 
+.container-social {
+    margin-bottom: 1rem;
+}
+
+/* Скрыть резюме над социальными сетями */
+.container-social .resume-mob {
+    display: none;
+}
+
+/* Текст описания */
+figcaption p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
+    text-decoration: none;
+}
+
+figcaption {
+    margin-top: 6px;
+}
+
+img.small {
+    max-height:270px;
+    width: auto;
+}
+
+img.regular {
+    max-width: 505px;
+    height: auto;
+}
+
+img.medium {
+    max-height:600px;
+    width: auto;
+}
+
+img.large {
+    max-width: 1010px;
+    height: auto;
+}
+
+figure img {
+    -ms-interpolation-mode: nearest-neighbor;   /* алгоритм для сжатия картинок, для браузера ie7 и старше*/
+   /*  image-rendering: pixelated;   /* поддержать набор цветов и резкость для разных размеров */
+    -moz-image-rendering: crisp-edges;   /* поддержать первоначальный набор цветов и резкость */
+    width: 100%; 
+    margin-right: 5px;
+    display: inline-block;
+    background-color: #000;
+}
+  
+figure {
+    padding: 0;
+    margin: 1em 0 0;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 1210px;
+}
+
+figure picture {
+    font-size: 0;
+}
+
+/* Темная тема */
+@media (prefers-color-scheme:dark) {
+    body,html,p {
+        background-color: #1e1e1e;
+        color: #dedede;
+    }
+
+    a {
+        color:#fff!important
+    }
+
+    .h1,a,h2,h4 {
+        color: #fff;
+    }
+
+    figcaption p,h3 {
+        color: #dedede!important
+    }
+
+    figure img {
+        margin-right: 6px;
+    }
+
+    div.project-container {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 1.0);
+    }
+}
+
+/* Правило для длинного названия (Микслайн) на средний экран */
+@media (max-width:1440px) {
+
+    /* Таблица проектов. Показать короткие названния */
+    #short {
+    display: inline;
+    }
+
+    #long {
+    display: none;
+    }
+
+/* На  планшете */
+@media (max-width:1180px) {
+
+    /* Скрыть короткие описания проектов дату */
+    #short {
+    display: none;
+    }
+
+    /* Таблица проектов. Скрыть длинные названия */
+    .project-container .project-name-desktope  {
+    display: none;
+    }
+
+    /* Таблица проектов. Показать короткие названния */
+    .project-container .project-name-mob {
+    display: inline;
+    }
+
+    /* Таблица проектов. Стили колонок проектов */
+    .project-container {
+        display: grid;  
+        grid-template-columns: 2fr 1fr;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 1.0);
+        margin-top: 0.3rem ;
+        height: 2rem;
+        color: #000;
+    }
+}
+
+/* На мобильных */
+@media (max-width:767px) {
+    .h3 {
+        font-size: 24px;
+    }
+    .h4 {
+        font-size: 18px;
+    }
+    .p,.p h1,.p p,p,table,ul {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    img.large,img.medium,img.regular,img.small {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    /* Таблица проектов. Скрыть длинные названия */
+    .project-container .project-name-desktope, .project-date {
+    display: none;
+    }
+
+    /* Таблица проектов. Показать короткие названния */
+    .project-container .project-name-mob, .project-date-mob {
+    display: inline;
+    }
+
+    /* Таблица проектов. Стили колонок проектов */
+    .project-container {
+        display: grid;  
+        grid-template-columns: 3fr 1fr;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 1.0);
+        
+        /* Отступ блока стекстом */
+        margin-top: 0.125rem ;
+
+        /* Высота блока с текстом */
+        height: 1.7rem;
+        color: #000;
+    }
+
+    /* Дата(стрелочка) прижата к правому краю */
+    .project-date-mob  {
+        display: grid;  
+        justify-items: end;
+    }
+}
+
