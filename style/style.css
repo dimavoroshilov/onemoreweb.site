@@ -168,6 +168,8 @@ article figure {
   display: grid;  
   grid-template-columns: 2fr 2fr 3fr;
   border-bottom: 0.5px solid rgba(0, 0, 0, 1.0);
+
+  /* Отступ строки сверху */
   margin-top: 0.3rem ;
   height: 2rem;
   color: #000;
@@ -417,6 +419,7 @@ article {
         display: grid;  
         grid-template-columns: 3fr 1fr;
         border-bottom: 0.5px solid rgba(0, 0, 0, 1.0);
+        
         /* Отступ строки сверху */
         margin-top: 0.45rem ;
         height: 2rem;
