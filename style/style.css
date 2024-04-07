@@ -417,7 +417,7 @@ article {
     /* Таблица проектов. Стили колонок проектов */
     .project-container {
         display: grid;  
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 3fr 2fr;
         border-bottom: 0.5px solid rgba(0, 0, 0, 1.0);
         
         /* Отступ строки сверху */
